@@ -15,7 +15,7 @@ function Basket(props) {
       <h2>Cart Items</h2>
       <div>{cartItems.length === 0 && <div>Cart is Empty</div>}</div>
       {cartItems.map(item => (
-        <div className='row'>
+        <div key={item.name} className='row'>
           <div>{item.name}</div>
           <div>
             <button className='add' onClick={() => onAdd(item)}>
